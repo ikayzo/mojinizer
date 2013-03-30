@@ -1,3 +1,4 @@
+# coding: utf-8
 module Ikayzo
   module MojiPlusRomajinizer
     def romaji
