@@ -1,7 +1,7 @@
 #coding: utf-8
 require 'spec_helper'
 
-describe Ikayzo::MojiPlusRomajinizer do
+describe Mojizilla do
   context "should convert" do
     it "romaji or katakana to hiragana properly" do
       "tsukue".hiragana.should == "つくえ"

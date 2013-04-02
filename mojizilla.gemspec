@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'ikayzo/moji_plus_romajinizer/version'
+require 'mojizilla/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "ikayzo-moji_plus_romajinizer"
-  spec.version       = Ikayzo::MojiPlusRomajinizer::VERSION
+  spec.name          = "mojizilla"
+  spec.version       = Mojizilla::VERSION
   spec.authors       = ["Ikayzo"]
   spec.email         = ["ckobayashi@ikayzo.com"]
-  spec.description   = %q{Combines the functionality of the Moji and Romajinizer gems. And adds useful detection and conversion methods to the String class. For more information visit https://github.com/ikayzo/ikayzo-moji_plus_romajinizer}
-  spec.summary       = %q{A gem for converting between hiragana, katakana, and romaji. Supports zenkaku to hankaku, and vice versa as well.}
-  spec.homepage      = "https://github.com/ikayzo/ikayzo-moji_plus_romajinizer"
+  spec.description   = %q{Combines the functionality of the Moji and Romajinizer gems. And adds Japanese kana detection and conversion methods to the String class.}
+  spec.summary       = %q{A gem for converting between hiragana, katakana, and romaji. This gem does not convert kanji characters.}
+  spec.homepage      = "https://github.com/c2k/mojizilla"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

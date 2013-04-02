@@ -1,8 +1,14 @@
-# Ikayzo::MojiPlusRomajinizer
+# Mojizilla
 
-A gem for converting between hiragana, katakana, and romaji. This gem does not convert kanji characters.
+A gem for converting between hiragana, katakana, and romaji.
 
-The bulk of the logic comes from the [moji](https://github.com/gimite/moji) and [romajinizer](https://github.com/joeellis/romajinizer) gems. This gem combines them and changes the method names to match ruby convention.
+This gem:
+
+* does _NOT_ convert kanji characters
+* adds Japanese kana detection and conversion methods to the String class
+* uses [moji](https://github.com/gimite/moji) to detect and convert kana strings (i.e., hiragana, katakana)
+* uses code from [romajinizer](https://github.com/joeellis/romajinizer) to convert kana to romaji and vice versa
+
 
 
 ## Installation
@@ -10,7 +16,7 @@ The bulk of the logic comes from the [moji](https://github.com/gimite/moji) and 
 Add this line to your application's `Gemfile`:
 
 ```ruby
-gem 'ikayzo-moji_plus_romajinizer'
+gem 'mojizilla'
 ```
 
 And then execute:
@@ -22,12 +28,12 @@ $ bundle
 Or install it yourself as:
 
 ```term
-$ gem install ikayzo-moji_plus_romajinizer
+$ gem install mojizilla
 ```
 
 ## Usage
 
-Japanese string conversion and detection methods are added to the `String` class. Call these like you would call any `String` object's method.
+Japanese string conversion and detection methods are added to the `String` class. Call these like you would call any `String` object's methods.
 
 ### Conversion Methods
 

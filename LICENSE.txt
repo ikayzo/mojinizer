@@ -22,44 +22,54 @@ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
----------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Christopher Kobayashi (ckobayashi at ikayzo.com 2013-03-26)
-https://github.com/c2k/ikayzo-moji_plus_romajinizer
+https://github.com/c2k/mojizilla
 
-Combine the Romajinizer and Moji gems.
-Following community etiquette, republished the gem as ikayzo-moji_plus_romajinizer.
+A gem for converting between hiragana, katakana, and romaji.
 
-Since this gem is not backwards compatible with either gem, I have 
-started over with the version number(0.0.1).
-(Based on Semantic Versioning standard - http://semver.org/)
----------------------------------------------------------------------
+This gem:
+
+* does _NOT_ convert kanji characters
+* adds Japanese kana detection and conversion methods to the String class
+* uses [moji](https://github.com/gimite/moji) to detect and convert kana
+strings (i.e., hiragana, katakana)
+* uses code from [romajinizer](https://github.com/joeellis/romajinizer) to
+convert kana to romaji and vice versa
+
+Since this gem is not backwards compatible with either gem, following
+community etiquette we have republished this gem under a different name and 
+started over with the version number.
+
+Versioning is based on the [Semantic Versioning standard](http://semver.org/)
+-------------------------------------------------------------------------------
 
 
 
 LICENSE HISTORY of the Romajinizer gem (originally called kana2rom.rb)
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 K.Kodama 2002.06
 This script is distributed freely in the sense of GNU General Public License.
 http://www.gnu.org/licenses/gpl.html
 #
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Paul Chapman (paul [a../t] longweekendmobile 2010-04-01)
 Repaired script to work with modern Ruby versions (1.86+), added comments,
 made it support gaijin friendly transliterations!
 kana2kana was added by Paul 2009-05-12 22:31
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 Joe Ellis (joe at squarefour.net 2011-03-09)
 Added a few more edge cases ('n romaji support),
 Started gemifications so it can easily be used in any project
 Added normalization for double nn so that こんばn will still be converted to 
 こんばん properly
 MIT License
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 
 
 LICENSE HISTORY of the Moji gem
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 ライセンス:
 
 Public Domainです。煮るなり焼くなりご自由に。
@@ -69,4 +79,4 @@ Literal transation -
 LICENSE:
 
 This is Public Domain. Boil it, bake it, use it freely.
----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------

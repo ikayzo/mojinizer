@@ -11,7 +11,7 @@ SimpleCov.start
 require 'rubygems'
 require 'bundler/setup'
 
-require 'ikayzo/moji_plus_romajinizer'
+require 'mojizilla'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
