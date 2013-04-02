@@ -1,6 +1,8 @@
 # Ikayzo::MojiPlusRomajinizer
 
-A gem for converting between hiragana, katakana, and romaji. The bulk of the logic comes from the [moji](https://github.com/gimite/moji) and [romajinizer](https://github.com/joeellis/romajinizer) gems. This gem combines them and changes the methods name to match the current ruby convention.
+A gem for converting between hiragana, katakana, and romaji. This gem does not convert kanji characters.
+
+The bulk of the logic comes from the [moji](https://github.com/gimite/moji) and [romajinizer](https://github.com/joeellis/romajinizer) gems. This gem combines them and changes the method names to match ruby convention.
 
 
 ## Installation
@@ -161,6 +163,31 @@ Used to detect Japanese character types (i.e., hiragana, katakana, kanji, full/h
 "Let's eat すし".contains_japanese? #=> true
 "It's Friday, Friday".contains_japanese? #=> false
 ```
+
+## License
+
+MIT License
+
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of this software and associated documentation files (the
+"Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Refer to [LICENSE.txt](blob/master/LICENSE.txt) file for addtional information.
 
 
 
