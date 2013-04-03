@@ -1,4 +1,4 @@
-# Mojizilla
+# Mojinizer
 
 A gem for converting between hiragana, katakana, and romaji.
 
@@ -16,7 +16,7 @@ This gem:
 Add this line to your application's `Gemfile`:
 
 ```ruby
-gem 'mojizilla'
+gem 'mojinizer'
 ```
 
 And then execute:
@@ -28,7 +28,7 @@ $ bundle
 Or install it yourself as:
 
 ```term
-$ gem install mojizilla
+$ gem install mojinizer
 ```
 
 ## Usage

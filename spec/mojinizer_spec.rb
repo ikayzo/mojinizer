@@ -1,7 +1,7 @@
 #coding: utf-8
 require 'spec_helper'
 
-describe Mojizilla do
+describe Mojinizer do
   context "should convert" do
     it "romaji or katakana to hiragana properly" do
       "tsukue".hiragana.should == "つくえ"

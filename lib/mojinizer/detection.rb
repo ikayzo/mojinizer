@@ -1,5 +1,5 @@
 # coding: utf-8
-module Mojizilla
+module Mojinizer
   def hiragana?
     moji_type?(Moji::HIRA)
   end

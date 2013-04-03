@@ -1,5 +1,5 @@
 # coding: utf-8
-module Mojizilla
+module Mojinizer
 
   Kana2romH={
     "ア"=>"a", "イ"=>"i", "ウ"=>"u", "エ"=>"e","オ"=>"o",
