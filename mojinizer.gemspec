@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ckobayashi@ikayzo.com"]
   spec.description   = %q{Combines the functionality of the Moji and Romajinizer gems. And adds Japanese kana detection and conversion methods to the String class.}
   spec.summary       = %q{A gem for converting between hiragana, katakana, and romaji. This gem does not convert kanji characters.}
-  spec.homepage      = "https://github.com/c2k/mojinizer"
+  spec.homepage      = "https://github.com/ikayzo/mojinizer"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

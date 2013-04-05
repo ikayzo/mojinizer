@@ -24,7 +24,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -------------------------------------------------------------------------------
 Christopher Kobayashi (ckobayashi at ikayzo.com 2013-03-26)
-https://github.com/c2k/mojinizer
+https://github.com/ikayzo/mojinizer
 
 A gem for converting between hiragana, katakana, and romaji.
 
