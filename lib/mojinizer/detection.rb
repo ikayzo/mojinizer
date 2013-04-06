@@ -29,9 +29,8 @@ module Mojinizer
   end
 
   def moji_type?(type)
-    chars = []
-    self.each_char { |c| chars << c if Moji.type?(c, type) }
-    (chars.count == self.length) ? true : false
+    self.each_char { |c| return false unless Moji.type?(c, type) }
+    return true
   end
 
   def contains_hiragana?
