@@ -1,7 +1,7 @@
 # coding: utf-8
 module Mojinizer
 
-  Kana2romH={
+  KANA_TO_ROM={
     "ア"=>"a", "イ"=>"i", "ウ"=>"u", "エ"=>"e","オ"=>"o",
     "あ"=>"a", "い"=>"i", "う"=>"u", "え"=>"e","お"=>"o",
     "カ"=>"ka", "キ"=>"ki", "ク"=>"ku", "ケ"=>"ke", "コ"=>"ko",
@@ -43,16 +43,16 @@ module Mojinizer
     " " => " "
   }
 
-  Kana2romH2={
+  KANA_TO_ROM2={
     "てぃ" => "ti", "でぃ" => "di"
   }
   # 1 character romaji patterns
-  Rom2KataH1={
+  ROM_TO_KATA1={
     "a"=>"ア", "i"=>"イ", "u"=>"ウ", "e"=>"エ", "o"=>"オ", "-"=>"ー"
   }
 
   # 2 character romaji patterns
-  Rom2KataH2={
+  ROM_TO_KATA2={
     "xa"=>"ァ", "xi"=>"ィ", "xu"=>"ゥ", "xe"=>"ェ", "xo"=>"ォ",
     "ka"=>"カ", "ki"=>"キ", "ku"=>"ク", "ke"=>"ケ", "ko"=>"コ",
     "ca"=>"カ", "cu"=>"ク", "co"=>"コ",
@@ -77,7 +77,7 @@ module Mojinizer
   }
 
   # 3 character romaji patterns
-  Rom2KataH3={
+  ROM_TO_KATA3={
     "tsu"=>"ツ",
     "xka"=>"ヵ", "xke"=>"ヶ",
     "xwa"=>"ヮ", "xtsu"=>"ッ",   "xya"=>"ャ",  "xyu"=>"ュ",  "xyo"=>"ョ",

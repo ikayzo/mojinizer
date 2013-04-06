@@ -4,8 +4,8 @@ module Mojinizer
   def romaji
     s=""
     self.each_char do |c|
-      if (Kana2romH.key?(c))
-        s += Kana2romH[c]
+      if (KANA_TO_ROM.key?(c))
+        s += KANA_TO_ROM[c]
       else
         s += c
       end
@@ -98,7 +98,7 @@ module Mojinizer
         ##### Patterns with 1 roman character
       when 1 then
         if word_buffer[0] =~ /[aiueo-]/
-          result += Rom2KataH1[word_buffer[0]]
+          result += ROM_TO_KATA1[word_buffer[0]]
           word_buffer = [] # a-->ア
         elsif word_buffer[0] =~ /[xkcgszjtdnhbpvfmyrlw']/
           if chars.size > 0
@@ -111,8 +111,8 @@ module Mojinizer
         end
         ##### Patterns with 2 roman characters
       when 2 then
-        if Rom2KataH2.key?(word_buffer.join)
-          result += Rom2KataH2[word_buffer.join]
+        if ROM_TO_KATA2.key?(word_buffer.join)
+          result += ROM_TO_KATA2[word_buffer.join]
           word_buffer = []
         elsif word_buffer.join =~ /([kgszjtcdnhbpmrl]y)|([stcd]h)|ts|(x[wytk])/ # goto 3
           if chars.size > 0
@@ -135,8 +135,8 @@ module Mojinizer
         end
         ##### Patterns with 3 roman characters
       when 3 then
-        if Rom2KataH3.key?(word_buffer.join)
-          result += Rom2KataH3[word_buffer.join]
+        if ROM_TO_KATA3.key?(word_buffer.join)
+          result += ROM_TO_KATA3[word_buffer.join]
           word_buffer=[]
         elsif word_buffer[0] == "n"
           result += "ン"
