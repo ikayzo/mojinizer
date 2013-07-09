@@ -18,3 +18,4 @@ tmp
 .rvmrc
 *sublime*
 .DS_Store
+*.ruby-gemset
