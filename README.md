@@ -66,14 +66,17 @@ Japanese string conversion and detection methods are added to the `String` class
 "ツクエ".kata_to_hira #=> "つくえ"
 ```
 
-* Zenkaku --> hankaku conversion (全角 --> 半角 文字種変換)
 * Hankaku --> zenkaku conversion (半角 --> 全角 文字種変換)
+* Zenkaku --> hankaku conversion (全角 --> 半角 文字種変換)
+* ASCII zenkaku --> hankaku conversion (ASCII全角 --> 半角 文字種変換)
 
 ```ruby
-"アロハ".zen_to_han #=> "ｱﾛﾊ"
-"Ａｌｏｈａ！".zen_to_han.should == "Aloha!"
 "ｱﾛﾊ".han_to_zen #=> "アロハ"
-"Aloha!".han_to_zen #=> "Ａｌｏｈａ！" 
+"Aloha!".han_to_zen #=> "Ａｌｏｈａ！"
+"アロハ".zen_to_han #=> "ｱﾛﾊ"
+"Ａｌｏｈａ！".zen_to_han #=> "Aloha!"
+"アロハ".ascii_zen_to_han #=> "アロハ"
+"Ａｌｏｈａ！".ascii_zen_to_han #=> "Aloha!"
 ```
 
 * Chaining conversion methods
@@ -126,12 +129,15 @@ If you need to detect other types of Japanese characters such as symbols or just
 
 * Is the entire string hankaku? (半角・文字種判定)
 * Is the entire string zenkaku? (全角・文字種判定)
+* Is the entire string ASCII zenkaku? (ASCII全角・文字種判定)
 
 ```ruby
 "ｱﾛﾊ".hankaku? #=> true
 "アロハ".hankaku? #=> false
 "ｱﾛﾊ".zenkaku? #=> false
-"アロハ".zenkaku? #=> true
+"アロハ　ｅｖｅｒｙｂｏｄｙ".zenkaku? #=> true
+"アロハ　ｅｖｅｒｙｂｏｄｙ".ascii_zenkaku? #=> false
+"Ａｌｏｈａ".ascii_zenkaku? #=> true
 ```
 
 * Is the entire string Japanese? (日本語・文字種判定)
@@ -168,12 +174,15 @@ If you need to detect other types of Japanese characters such as symbols or just
 
 * Does the string contain hankaku? (半角・文字種判定)
 * Does the string contain zenkaku? (全角・文字種判定)
+* Does the string contain ASCII zenkaku? (ASCII全角・文字種判定)
 
 ```ruby
 "ｱﾛﾊ everybody".contains_hankaku? #=> true
 "Let's eat すし".contains_hankaku? #=> false
 "ｱﾛﾊ everybody".contains_zenkaku? #=> false
 "Let's eat すし".contains_zenkaku? #=> true
+"アロハ everybody".contains_ascii_zenkaku? #=> false
+"Let's eat ｓｕｓｈｉ".contains_ascii_zenkaku? #=> true
 ```
 
 * Does the string contain Japanese? (日本語・文字種判定)

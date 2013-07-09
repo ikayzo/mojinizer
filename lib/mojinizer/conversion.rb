@@ -81,6 +81,10 @@ module Mojinizer
     Moji.zen_to_han(self)
   end
 
+  def ascii_zen_to_han
+    Moji.zen_to_han(self, Moji::ZEN_ALNUM | Moji::ZEN_ASYMBOL)
+  end
+
   def roma_to_kata
 
     result=""
