@@ -55,6 +55,14 @@ describe Mojinizer do
       "".zen_to_han.should == ""
     end
 
+    it "ASCII zenkaku to hankaku properly" do
+      "あろは".ascii_zen_to_han.should == "あろは"
+      "「アロハ！」".ascii_zen_to_han.should == "「アロハ!」"
+      "＠ｌｏ　ｈａ！".ascii_zen_to_han.should == "@lo ha!"
+      "ＡＬＯＨＡ！".ascii_zen_to_han.should == "ALOHA!"
+      "".ascii_zen_to_han.should == ""
+    end
+
     it "romaji or kana to zenkaku properly" do
       "ｱﾛﾊ!".han_to_zen.should == "アロハ！"
       "あろは！".han_to_zen.should == "あろは！"
@@ -123,6 +131,21 @@ describe Mojinizer do
       "ｱﾛﾊeverybody".contains_zenkaku?.should == false
     end
 
+    it "ASCII zenkaku" do
+      "あ".contains_ascii_zenkaku?.should == false
+      "ア".contains_ascii_zenkaku?.should == false
+      "アＡ".contains_ascii_zenkaku?.should == true
+      "a".contains_ascii_zenkaku?.should == false
+      "Ａ".contains_ascii_zenkaku?.should == true
+      "ＡＬＯＨＡ".contains_ascii_zenkaku?.should == true
+      "アろは".contains_ascii_zenkaku?.should == false
+      "aloha".contains_ascii_zenkaku?.should == false
+      "aloは".contains_ascii_zenkaku?.should == false
+      "ｱ".contains_ascii_zenkaku?.should == false
+      "ｱﾛﾊ".contains_ascii_zenkaku?.should == false
+      "ｱﾛﾊeverybody".contains_ascii_zenkaku?.should == false
+    end
+
     it "Japanese characters" do
       "行きます".contains_japanese?.should == true
       "abcdefg!".contains_japanese?.should == false
@@ -185,6 +208,9 @@ describe Mojinizer do
       "ｱ".hankaku?.should == true
       "ｱﾛﾊ".hankaku?.should == true
       "｡".hankaku?.should == true
+      "@?!".hankaku?.should == false
+      "＠？！".hankaku?.should == false
+      "。「」、".hankaku?.should == false
     end
 
     it "zenkaku" do
@@ -199,6 +225,27 @@ describe Mojinizer do
       "aloは".zenkaku?.should == false
       "ｱ".zenkaku?.should == false
       "ｱﾛﾊ".zenkaku?.should == false
+      "@?!".zenkaku?.should == false
+      "＠？！".zenkaku?.should == true
+      "。「」、".zenkaku?.should == true
+    end
+
+    it "ASCII zenkaku" do
+      "あ".ascii_zenkaku?.should == false
+      "ア".ascii_zenkaku?.should == false
+      "アＡ".ascii_zenkaku?.should == false
+      "a".ascii_zenkaku?.should == false
+      "Ａ".ascii_zenkaku?.should == true
+      "ＡＬＯＨＡ".ascii_zenkaku?.should == true
+      "アろは".ascii_zenkaku?.should == false
+      "アロハ".ascii_zenkaku?.should == false
+      "aloha".ascii_zenkaku?.should == false
+      "aloは".ascii_zenkaku?.should == false
+      "ｱ".ascii_zenkaku?.should == false
+      "ｱﾛﾊ".ascii_zenkaku?.should == false
+      "@?!".ascii_zenkaku?.should == false
+      "＠？！".ascii_zenkaku?.should == true
+      "。「」、".ascii_zenkaku?.should == false
     end
 
     it "Japanese characters" do

@@ -24,6 +24,10 @@ module Mojinizer
     moji_type?(Moji::ZEN)
   end
 
+  def ascii_zenkaku?
+    moji_type?(Moji::ZEN_ALNUM | Moji::ZEN_ASYMBOL)
+  end
+
   def japanese?
     moji_type?(Moji::ZEN | Moji::JSYMBOL | Moji::HAN_KATA)
   end
@@ -55,6 +59,10 @@ module Mojinizer
 
   def contains_zenkaku?
     contains_moji_type?(Moji::ZEN)
+  end
+
+  def contains_ascii_zenkaku?
+    contains_moji_type?(Moji::ZEN_ALNUM | Moji::ZEN_ASYMBOL)
   end
 
   def contains_japanese?
