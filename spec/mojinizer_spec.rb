@@ -55,12 +55,12 @@ describe Mojinizer do
       "".zen_to_han.should == ""
     end
 
-    it "ASCII zenkaku to hankaku properly" do
-      "あろは".ascii_zen_to_han.should == "あろは"
-      "「アロハ！」".ascii_zen_to_han.should == "「アロハ!」"
-      "＠ｌｏ　ｈａ！".ascii_zen_to_han.should == "@lo ha!"
-      "ＡＬＯＨＡ！".ascii_zen_to_han.should == "ALOHA!"
-      "".ascii_zen_to_han.should == ""
+    it "normalize zenkaku and hankaku properly" do
+      "「あろは。」".normalize_zen_han.should == "「あろは。」"
+      "｢アロハ！｣".normalize_zen_han.should == "「アロハ!」"
+      "＠ｌｏ　ハ！".normalize_zen_han.should == "@lo ハ!"
+      "あﾛＨＡ！".normalize_zen_han.should == "あロHA!"
+      "".normalize_zen_han.should == ""
     end
 
     it "romaji or kana to zenkaku properly" do
