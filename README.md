@@ -68,15 +68,15 @@ Japanese string conversion and detection methods are added to the `String` class
 
 * Hankaku --> zenkaku conversion (半角 --> 全角 文字種変換)
 * Zenkaku --> hankaku conversion (全角 --> 半角 文字種変換)
-* ASCII zenkaku --> hankaku conversion (ASCII全角 --> 半角 文字種変換)
+* Zenkaku <--> hankaku normalization (全角 <--> 半角 文字規準化)
 
 ```ruby
 "ｱﾛﾊ".han_to_zen #=> "アロハ"
 "Aloha!".han_to_zen #=> "Ａｌｏｈａ！"
 "アロハ".zen_to_han #=> "ｱﾛﾊ"
 "Ａｌｏｈａ！".zen_to_han #=> "Aloha!"
-"アロハ".ascii_zen_to_han #=> "アロハ"
-"Ａｌｏｈａ！".ascii_zen_to_han #=> "Aloha!"
+"ｱﾛﾊ！".normalize_zen_han #=> "アロハ!"
+"｢Ａｌｏｈａ｣".normalize_zen_han #=> "「Aloha」"
 ```
 
 * Chaining conversion methods
