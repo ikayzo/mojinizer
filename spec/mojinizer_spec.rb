@@ -5,6 +5,7 @@ describe Mojinizer do
   context "should convert" do
     it "romaji or katakana to hiragana properly" do
       "tsukue".hiragana.should == "つくえ"
+      "tukue".hiragana.should == "つくえ"
       "kinnyoubi".hiragana.should == "きんようび"
       "kin'youbi".hiragana.should == "きんようび"
       "konnya".hiragana.should == "こんや"
@@ -18,6 +19,7 @@ describe Mojinizer do
 
     it "romaji or hiragana to katakana properly" do
       "tsukue".katakana.should == "ツクエ"
+      "tukue".katakana.should == "ツクエ"
       "kinnyoubi".katakana.should == "キンヨウビ"
       "kin'youbi".katakana.should == "キンヨウビ"
       "konnya".katakana.should == "コンヤ"
@@ -35,10 +37,12 @@ describe Mojinizer do
 
     it "kana to romaji properly" do
       "つくえ".romaji.should == "tsukue"
+      "すし".romaji.should == "sushi"
       "きんようび".romaji.should == "kinyoubi"
       "こんや".romaji.should == "konya"
       "こんにち".romaji.should == "konnichi"
       "ツクエ".romaji.should == "tsukue"
+      "スシ".romaji.should == "sushi"
       "キンヨウビ".romaji.should == "kinyoubi"
       "コンヤ".romaji.should == "konya"
       "コンニチ".romaji.should == "konnichi"
