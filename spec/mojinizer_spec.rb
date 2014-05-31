@@ -36,6 +36,26 @@ describe Mojinizer do
     end
 
     it "kana to romaji properly" do
+      "つくえ".kana_to_roma.should == "tsukue"
+      "すし".kana_to_roma.should == "sushi"
+      "きんようび".kana_to_roma.should == "kinyoubi"
+      "こんや".kana_to_roma.should == "konya"
+      "こんにち".kana_to_roma.should == "konnichi"
+      "ツクエ".kana_to_roma.should == "tsukue"
+      "スシ".kana_to_roma.should == "sushi"
+      "キンヨウビ".kana_to_roma.should == "kinyoubi"
+      "コンヤ".kana_to_roma.should == "konya"
+      "コンニチ".kana_to_roma.should == "konnichi"
+      "today is きんようび".kana_to_roma.should == "today is kinyoubi"
+      "today is キンヨウビ".kana_to_roma.should == "today is kinyoubi"
+      "runner".kana_to_roma.should == "runner"
+      "runner".kana_to_roma.should == "runner"
+      "runner きんようびrunner コンニチ".kana_to_roma.should == "runner kinyoubirunner konnichi"
+      "runner きんようびrunner コンニチ runner".kana_to_roma.should == "runner kinyoubirunner konnichi runner"
+      "".kana_to_roma.should == ""
+    end
+
+    it "full text to romaji properly" do
       "つくえ".romaji.should == "tsukue"
       "すし".romaji.should == "sushi"
       "きんようび".romaji.should == "kinyoubi"
@@ -48,6 +68,7 @@ describe Mojinizer do
       "コンニチ".romaji.should == "konnichi"
       "today is きんようび".romaji.should == "today is kinyoubi"
       "today is キンヨウビ".romaji.should == "today is kinyoubi"
+      "runner".romaji.should == "runer"
       "".romaji.should == ""
     end
 

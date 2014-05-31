@@ -85,6 +85,21 @@ module Mojinizer
     Moji.normalize_zen_han(self)
   end
 
+  def kana_to_roma
+    result=""
+    kana_buffer=""
+    self.each_char do |c|
+      if c.kana?
+        kana_buffer << c
+      else
+        result << kana_buffer.romaji
+        kana_buffer = ""
+        result << c
+      end
+    end
+    result << kana_buffer.romaji
+  end
+
   def roma_to_kata
 
     result=""
