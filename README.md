@@ -4,11 +4,10 @@ A gem for converting between hiragana, katakana, and romaji.
 
 This gem:
 
-* does _NOT_ convert kanji characters
 * adds Japanese kana detection and conversion methods to the String class
 * uses [moji](https://github.com/gimite/moji) to detect and convert kana strings (i.e., hiragana, katakana)
 * uses code from [romajinizer](https://github.com/joeellis/romajinizer) to convert kana to romaji and vice versa
-
+* does **_NOT_** convert kanji characters. For kanji conversion, try the [MeCab](https://code.google.com/p/mecab/) library and the [Natto](https://bitbucket.org/buruzaemon/natto) gem.
 
 
 ## Installation
