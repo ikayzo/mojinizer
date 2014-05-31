@@ -42,6 +42,8 @@ Japanese string conversion and detection methods are added to the `String` class
 ```ruby
 "つくえ".romaji #=> "tsukue"
 "ツクエ".romaji #=> "tsukue"
+"runner ツクエ".romaji #=> "runer tsukue"          # .romaji method affects non-kana chars
+"runner ツクエ".kana_to_roma #=> "runner tsukue"   # .kana_to_roma method preserves non-kana chars
 ```
 
 * Katakana/romaji　--> hiragana conversion (片仮名/ロ－マ字 --> 平仮名 変換)
